@@ -16,4 +16,8 @@
     <ProjectReference Include="..\PMQ.GerenciamentoTarefas.Domain\PMQ.GerenciamentoTarefas.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Tarefas\" />
+  </ItemGroup>
+
 </Project>

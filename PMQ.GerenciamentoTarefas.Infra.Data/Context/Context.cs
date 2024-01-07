@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas;
 
 namespace PMQ.GerenciamentoTarefas.Infra.Data.Context
 {
@@ -15,6 +16,8 @@ namespace PMQ.GerenciamentoTarefas.Infra.Data.Context
             _configuration = configuration;
             _loggerFactory = loggerFactory;
         }
+
+        public DbSet<Tarefa> Tarefa { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
