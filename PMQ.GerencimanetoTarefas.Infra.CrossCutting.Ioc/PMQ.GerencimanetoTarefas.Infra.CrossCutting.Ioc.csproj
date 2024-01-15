@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PMQ.GerenciamentoTarefas.Domain\PMQ.GerenciamentoTarefas.Domain.csproj" />
+    <ProjectReference Include="..\PMQ.GerenciamentoTarefas.Infra.Data\PMQ.GerenciamentoTarefas.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -4,9 +4,9 @@ namespace PMQ.GerenciamentoTarefas.Infra.Data.UoW
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly Context.Context _context;
+        private readonly Context.TarefaContext _context;
 
-        public UnitOfWork(Context.Context context)
+        public UnitOfWork(Context.TarefaContext context)
         {
             _context = context;
         }

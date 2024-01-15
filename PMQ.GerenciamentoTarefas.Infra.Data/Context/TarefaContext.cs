@@ -6,18 +6,18 @@ using PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas;
 
 namespace PMQ.GerenciamentoTarefas.Infra.Data.Context
 {
-    public class Context : DbContext
+    public class TarefaContext : DbContext
     {
         private readonly IConfiguration _configuration;
         private readonly ILoggerFactory _loggerFactory;
 
-        public Context(IConfiguration configuration, ILoggerFactory loggerFactory)
+        public TarefaContext(IConfiguration configuration, ILoggerFactory loggerFactory)
         {
             _configuration = configuration;
             _loggerFactory = loggerFactory;
         }
 
-        public DbSet<Tarefa> Tarefa { get; set; }
+        public DbSet<Tarefa> Tarefas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
