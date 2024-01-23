@@ -3,27 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMQ.GerenciamentoTarefas", "PMQ.GerenciamentoTarefas\PMQ.GerenciamentoTarefas.csproj", "{FB976E24-4CD0-4813-8F78-88D429AF50FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMQ.GerenciamentoTarefas", "src\PMQ.GerenciamentoTarefas\PMQ.GerenciamentoTarefas.csproj", "{FB976E24-4CD0-4813-8F78-88D429AF50FB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Services", "01 - Services", "{D27F7856-619A-41C2-9EB5-B6FA61F718FE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Services", "src\01 - Services", "{D27F7856-619A-41C2-9EB5-B6FA61F718FE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Domain", "02 - Domain", "{EFEF97D1-B931-4008-83D8-EC055EB154B5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Domain", "src\02 - Domain", "{EFEF97D1-B931-4008-83D8-EC055EB154B5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Infra", "03 - Infra", "{CF54E4EE-3452-498D-A39E-3934027B42DE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Infra", "src\03 - Infra", "{CF54E4EE-3452-498D-A39E-3934027B42DE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.3 - ExternalServices", "03.3 - ExternalServices", "{846DC53A-24F1-4736-B726-5B5C83098018}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.3 - ExternalServices", "src\03.3 - ExternalServices", "{846DC53A-24F1-4736-B726-5B5C83098018}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.2 - CrossCutting", "03.2 - CrossCutting", "{7E997BA1-1A70-46F7-AC83-F9F5C0672309}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.2 - CrossCutting", "src\03.2 - CrossCutting", "{7E997BA1-1A70-46F7-AC83-F9F5C0672309}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.1 - Data", "03.1 - Data", "{31368260-C1F0-453A-8B19-79162F861CFF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.1 - Data", "src\03.1 - Data", "{31368260-C1F0-453A-8B19-79162F861CFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMQ.GerenciamentoTarefas.Infra.Data", "PMQ.GerenciamentoTarefas.Infra.Data\PMQ.GerenciamentoTarefas.Infra.Data.csproj", "{FE98BEF8-1137-499B-9EB4-B2DD13BEF752}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMQ.GerenciamentoTarefas.Infra.Data", "src\PMQ.GerenciamentoTarefas.Infra.Data\PMQ.GerenciamentoTarefas.Infra.Data.csproj", "{FE98BEF8-1137-499B-9EB4-B2DD13BEF752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMQ.GerenciamnetoTarefas.Infra.CrossCutting", "PMQ.GerenciamnetoTarefas.Infra.CrossCutting\PMQ.GerenciamnetoTarefas.Infra.CrossCutting.csproj", "{A8B410EF-ED57-4AC9-839D-C6693C07774A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMQ.GerenciamnetoTarefas.Infra.CrossCutting", "src\PMQ.GerenciamnetoTarefas.Infra.CrossCutting\PMQ.GerenciamnetoTarefas.Infra.CrossCutting.csproj", "{A8B410EF-ED57-4AC9-839D-C6693C07774A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc", "PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc\PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc.csproj", "{4861E156-499A-49EA-8F42-6BB2F2649469}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc", "src\PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc\PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc.csproj", "{4861E156-499A-49EA-8F42-6BB2F2649469}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMQ.GerenciamentoTarefas.Domain", "PMQ.GerenciamentoTarefas.Domain\PMQ.GerenciamentoTarefas.Domain.csproj", "{E6B5BB4F-B1D1-4C53-9CAF-953A7A2EFE64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMQ.GerenciamentoTarefas.Domain", "src\PMQ.GerenciamentoTarefas.Domain\PMQ.GerenciamentoTarefas.Domain.csproj", "{E6B5BB4F-B1D1-4C53-9CAF-953A7A2EFE64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
