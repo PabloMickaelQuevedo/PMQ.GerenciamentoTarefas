@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using PMQ.GerenciamentoTarefas.Domain.Interfaces;
+using PMQ.GerenciamentoTarefas.Domain.Interfaces.Repositories;
 using PMQ.GerenciamentoTarefas.Infra.Data.Context;
+using PMQ.GerenciamentoTarefas.Infra.Data.Repositories;
 using PMQ.GerenciamentoTarefas.Infra.Data.UoW;
 
 namespace PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc
@@ -12,7 +14,7 @@ namespace PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc
             // Domain Services
 
             // Repositories 
-            // service.AddScoped<IRepository, Repository>();
+            services.AddScoped<ITarefaRepository, TarefaRepository>();
 
             // Database Contexts
             services.AddDbContext<TarefaContext>();
