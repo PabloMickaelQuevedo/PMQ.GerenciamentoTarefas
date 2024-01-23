@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Listar;
+using PMQ.GerenciamentoTarefas.Models.Tarefas.Listar;
 
 namespace PMQ.GerenciamentoTarefas.Controllers
 {
@@ -16,9 +17,9 @@ namespace PMQ.GerenciamentoTarefas.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<string>> ListarTarefasAsync()
+        public async Task<IEnumerable<ListarTarefaResponse?>> ListarTarefasAsync([FromQuery] ListarTarefasCommand command, CancellationToken cancellationToken)
         {
-            return await _mediator.Send(new ListarTarefasCommand());
+            return ListarTarefaResponse.Map(await _mediator.Send(command, cancellationToken));
         }
     }
 }

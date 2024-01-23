@@ -23,10 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Tarefas\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\PMQ.GerenciamentoTarefas.Domain\PMQ.GerenciamentoTarefas.Domain.csproj" />
     <ProjectReference Include="..\PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc\PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc.csproj" />
   </ItemGroup>
