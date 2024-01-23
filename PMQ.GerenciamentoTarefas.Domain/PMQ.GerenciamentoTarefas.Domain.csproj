@@ -20,6 +20,7 @@
     <Folder Include="Interfaces\Repositories\" />
     <Folder Include="Interfaces\Services\" />
     <Folder Include="Mappers\" />
+    <Folder Include="ValueObjects\" />
   </ItemGroup>
 
 </Project>

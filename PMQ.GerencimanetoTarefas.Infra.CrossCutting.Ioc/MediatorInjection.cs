@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc
 {
-    public class MediatorInjection
+    public static class MediatorInjection
     {
         private static Assembly DomainAssembly => AppDomain.CurrentDomain.Load("PMQ.GerenciamentoTarefas.Domain");
 

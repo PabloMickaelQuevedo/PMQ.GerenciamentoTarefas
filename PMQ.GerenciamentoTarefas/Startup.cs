@@ -9,7 +9,7 @@ namespace PMQ.GerenciamentoTarefas
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public readonly IConfiguration Configuration;
 
         public void ConfigureServices(IServiceCollection services)
         {

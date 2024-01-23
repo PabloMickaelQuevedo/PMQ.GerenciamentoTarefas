@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using PMQ.GerenciamentoTarefas.Domain.Interfaces;
+using PMQ.GerenciamentoTarefas.Infra.Data.Context;
 using PMQ.GerenciamentoTarefas.Infra.Data.UoW;
 
 namespace PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc
@@ -15,7 +15,7 @@ namespace PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc
             // service.AddScoped<IRepository, Repository>();
 
             // Database Contexts
-            services.AddDbContext<DbContext>();
+            services.AddDbContext<TarefaContext>();
 
             // UnitOfWork
             services.AddScoped<IUnitOfWork, UnitOfWork>();
