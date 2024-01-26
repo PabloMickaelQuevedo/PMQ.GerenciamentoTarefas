@@ -1,7 +1,11 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Adicionar;
 using PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Listar;
+using PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Obter;
+using PMQ.GerenciamentoTarefas.Models.Tarefas.Adicionar;
 using PMQ.GerenciamentoTarefas.Models.Tarefas.Listar;
+using PMQ.GerenciamentoTarefas.Models.Tarefas.Obter;
 
 namespace PMQ.GerenciamentoTarefas.Controllers
 {
@@ -20,6 +24,19 @@ namespace PMQ.GerenciamentoTarefas.Controllers
         public async Task<IEnumerable<ListarTarefaResponse?>> ListarTarefasAsync([FromQuery] ListarTarefasCommand command, CancellationToken cancellationToken)
         {
             return ListarTarefaResponse.Map(await _mediator.Send(command, cancellationToken));
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ObterTarefaResponse?> ObterTarefaPorIdAsync([FromRoute] string id, CancellationToken cancellationToken)
+        {
+            var command = new ObterTarefaCommand(id);
+            return ObterTarefaResponse.Map(await _mediator.Send(command, cancellationToken));
+        }
+
+        [HttpPost("adicionar")]
+        public async Task<AdicionarTarefaResponse> AdicionarTarefaAsync([FromBody] AdicionarTarefaCommand command, CancellationToken cancellationToken)
+        {
+            return new AdicionarTarefaResponse(await _mediator.Send(command, cancellationToken));
         }
     }
 }

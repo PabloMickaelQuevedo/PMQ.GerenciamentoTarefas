@@ -1,10 +1,11 @@
-﻿using PMQ.GerenciamentoTarefas.Domain.Enuns.Tarefas;
+﻿using MediatR;
+using PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas;
+using PMQ.GerenciamentoTarefas.Domain.Enuns.Tarefas;
 
-namespace PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas
+namespace PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Adicionar
 {
-    public class Tarefa
+    public class AdicionarTarefaCommand : IRequest<string>
     {
-        public string Id { get; private set; }
         public string Titulo { get; private set; }
         public string? Descricao { get; private set; }
         public DateTime DataVencimento { get; private set; }
@@ -13,13 +14,14 @@ namespace PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas
         public string? EtiquetasId { get; private set; }
         public EStatus Status { get; private set; }
 
-        protected Tarefa()
+        public AdicionarTarefaCommand(
+            string titulo,
+            string descricao,
+            DateTime dataVencimento,
+            EPrioridade prioridade,
+            Etiqueta etiquetas,
+            EStatus status)
         {
-        }
-
-        public Tarefa(string titulo, string? descricao, DateTime dataVencimento, EPrioridade prioridade, Etiqueta? etiquetas, EStatus status)
-        {
-            Id = Guid.NewGuid().ToString();
             Titulo = titulo;
             Descricao = descricao;
             DataVencimento = dataVencimento;
