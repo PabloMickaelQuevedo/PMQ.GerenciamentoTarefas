@@ -3,11 +3,11 @@ using PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas;
 
 namespace PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Obter
 {
-    public class ObterTarefaCommand : IRequest<Tarefa?>
+    public class ObterTarefaQuery : IRequest<Tarefa?>
     {
         public string Id { get; private set; }
 
-        public ObterTarefaCommand(string id)
+        public ObterTarefaQuery(string id)
         {
             Id = id;
         }

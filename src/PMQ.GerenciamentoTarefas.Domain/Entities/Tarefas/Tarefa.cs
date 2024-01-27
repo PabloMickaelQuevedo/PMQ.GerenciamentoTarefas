@@ -27,5 +27,15 @@ namespace PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas
             Etiquetas = etiquetas;
             Status = status;
         }
+
+        public void Atualizar(string titulo, string? descricao, DateTime dataVencimento, EPrioridade prioridade, Etiqueta? etiquetas, EStatus status)
+        {
+            Titulo = titulo;
+            Descricao = descricao;
+            DataVencimento = dataVencimento;
+            Prioridade = prioridade;
+            Etiquetas = etiquetas;
+            Status = status;
+        }
     }
 }
