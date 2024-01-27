@@ -1,4 +1,5 @@
-﻿using PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc;
+﻿using Microsoft.AspNetCore.Mvc;
+using PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc;
 
 namespace PMQ.GerenciamentoTarefas
 {
@@ -14,6 +15,12 @@ namespace PMQ.GerenciamentoTarefas
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
+
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
 

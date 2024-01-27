@@ -4,18 +4,18 @@ using PMQ.GerenciamentoTarefas.Domain.Interfaces.Repositories;
 
 namespace PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Obter
 {
-    public class ObterTarefaCommandHandler : IRequestHandler<ObterTarefaCommand, Tarefa?>
+    public class ObterTarefaQueryHandler : IRequestHandler<ObterTarefaQuery, Tarefa?>
     {
         private readonly ITarefaRepository _tarefaRepository;
 
-        public ObterTarefaCommandHandler(ITarefaRepository tarefaRepository)
+        public ObterTarefaQueryHandler(ITarefaRepository tarefaRepository)
         {
             _tarefaRepository = tarefaRepository;
         }
 
-        public async Task<Tarefa?> Handle(ObterTarefaCommand request, CancellationToken cancellationToken)
+        public async Task<Tarefa?> Handle(ObterTarefaQuery request, CancellationToken cancellationToken)
         {
-            return await _tarefaRepository.ObterTarefaPorId(request.Id, cancellationToken);
+            return await _tarefaRepository.ObterPorIdAsync(request.Id, cancellationToken);
         }
     }
 }

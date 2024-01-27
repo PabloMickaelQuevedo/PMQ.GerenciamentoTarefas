@@ -21,7 +21,7 @@ namespace PMQ.GerenciamentoTarefas.Infra.Data.Repositories
                 .ToListAsync(cancellationToken);
         }
 
-        public async Task<Tarefa?> ObterTarefaPorId(string id, CancellationToken cancellationToken)
+        public async Task<Tarefa?> ObterPorIdAsync(string id, CancellationToken cancellationToken)
         {
             return await _tarefacontext.Tarefas
                 .Include(t => t.Etiquetas)
@@ -31,6 +31,11 @@ namespace PMQ.GerenciamentoTarefas.Infra.Data.Repositories
         public async Task AdicionarAsync(Tarefa tarefa, CancellationToken cancellationToken)
         {
             await _tarefacontext.AddAsync(tarefa, cancellationToken);
+        }
+
+        public void Remover(Tarefa tarefa)
+        {
+            _tarefacontext.Remove(tarefa);
         }
     }
 }
