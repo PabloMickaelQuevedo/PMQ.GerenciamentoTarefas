@@ -25,8 +25,8 @@ namespace PMQ.GerenciamentoTarefas
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
 
-            MediatorInjection.AddMediator(services);
-            DependencyInjection.AddServices(services);
+            services.AddMediator();
+            services.AddServices();
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)

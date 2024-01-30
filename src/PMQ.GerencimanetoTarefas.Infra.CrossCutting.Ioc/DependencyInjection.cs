@@ -7,9 +7,9 @@ using PMQ.GerenciamentoTarefas.Infra.Data.UoW;
 
 namespace PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc
 {
-    public class DependencyInjection
+    public static class DependencyInjection
     {
-        public static void AddServices(IServiceCollection services)
+        public static void AddServices(this IServiceCollection services)
         {
             // Domain Services
 
