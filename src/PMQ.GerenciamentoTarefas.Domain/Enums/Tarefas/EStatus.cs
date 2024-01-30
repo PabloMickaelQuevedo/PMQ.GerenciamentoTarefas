@@ -1,4 +1,4 @@
-﻿namespace PMQ.GerenciamentoTarefas.Domain.Enuns.Tarefas
+﻿namespace PMQ.GerenciamentoTarefas.Domain.Enums.Tarefas
 {
     public enum EStatus
     {
