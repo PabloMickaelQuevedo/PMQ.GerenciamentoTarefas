@@ -16,6 +16,7 @@ namespace PMQ.GerenciamentoTarefas
         {
             services.AddControllers();
 
+            //Configuração para não retornar o erro de validação do FluentValidation
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true;
@@ -24,8 +25,8 @@ namespace PMQ.GerenciamentoTarefas
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
 
-            MediatorInjection.AddMediator(services);
-            DependencyInjection.AddServices(services);
+            services.AddMediator();
+            services.AddServices();
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)

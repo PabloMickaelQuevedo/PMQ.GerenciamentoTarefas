@@ -7,7 +7,7 @@ namespace PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc
     {
         private static Assembly DomainAssembly => AppDomain.CurrentDomain.Load("PMQ.GerenciamentoTarefas.Domain");
 
-        public static void AddMediator(IServiceCollection services)
+        public static void AddMediator(this IServiceCollection services)
         {
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(DomainAssembly));
         }

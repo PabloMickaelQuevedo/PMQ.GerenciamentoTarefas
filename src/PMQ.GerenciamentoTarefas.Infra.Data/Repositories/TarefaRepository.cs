@@ -18,6 +18,8 @@ namespace PMQ.GerenciamentoTarefas.Infra.Data.Repositories
         {
             return await _tarefacontext.Tarefas
                 .Include(t => t.Etiquetas)
+                .OrderBy(t => t.DataVencimento)
+                .ThenBy(t => t.Prioridade)
                 .ToListAsync(cancellationToken);
         }
 
