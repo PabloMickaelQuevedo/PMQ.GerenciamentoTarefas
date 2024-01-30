@@ -1,5 +1,5 @@
 ﻿using PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas;
-using PMQ.GerenciamentoTarefas.Domain.Enuns.Tarefas;
+using PMQ.GerenciamentoTarefas.Domain.Enums.Tarefas;
 
 namespace PMQ.GerenciamentoTarefas.Models.Tarefas.Obter
 {
