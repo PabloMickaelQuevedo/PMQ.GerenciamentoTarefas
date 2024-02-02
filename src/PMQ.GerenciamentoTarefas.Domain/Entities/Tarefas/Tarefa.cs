@@ -2,9 +2,8 @@
 
 namespace PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas
 {
-    public class Tarefa
+    public class Tarefa : Entity
     {
-        public string Id { get; private set; }
         public string Titulo { get; private set; }
         public string Descricao { get; private set; }
         public DateTime DataVencimento { get; private set; }
@@ -19,7 +18,6 @@ namespace PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas
 
         public Tarefa(string titulo, string descricao, DateTime dataVencimento, EPrioridade prioridade, Etiqueta? etiquetas, EStatus status)
         {
-            Id = Guid.NewGuid().ToString();
             Titulo = titulo;
             Descricao = descricao;
             DataVencimento = dataVencimento;
