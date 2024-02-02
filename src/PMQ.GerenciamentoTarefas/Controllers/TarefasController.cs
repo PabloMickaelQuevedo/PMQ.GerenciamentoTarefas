@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Adicionar;
 using PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Atualizar;
-using PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Listar;
-using PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Obter;
 using PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Remover;
+using PMQ.GerenciamentoTarefas.Domain.Querys.Tarefas.Listar;
+using PMQ.GerenciamentoTarefas.Domain.Querys.Tarefas.Obter;
 using PMQ.GerenciamentoTarefas.Models.Tarefas.Adicionar;
 using PMQ.GerenciamentoTarefas.Models.Tarefas.Listar;
 using PMQ.GerenciamentoTarefas.Models.Tarefas.Obter;
@@ -31,8 +31,8 @@ namespace PMQ.GerenciamentoTarefas.Controllers
         [HttpGet("{id}/obter")]
         public async Task<ObterTarefaResponse?> ObterTarefaPorIdAsync([FromRoute] string id, CancellationToken cancellationToken)
         {
-            var command = new ObterTarefaQuery(id);
-            return ObterTarefaResponse.Map(await _mediator.Send(command, cancellationToken));
+            var query = new ObterTarefaQuery(id);
+            return ObterTarefaResponse.Map(await _mediator.Send(query, cancellationToken));
         }
 
         [HttpPost("adicionar")]

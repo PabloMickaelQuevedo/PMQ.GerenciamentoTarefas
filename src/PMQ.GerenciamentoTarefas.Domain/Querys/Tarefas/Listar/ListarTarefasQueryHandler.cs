@@ -2,7 +2,7 @@
 using PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas;
 using PMQ.GerenciamentoTarefas.Domain.Interfaces.Repositories;
 
-namespace PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Listar
+namespace PMQ.GerenciamentoTarefas.Domain.Querys.Tarefas.Listar
 {
     public class ListarTarefasQueryHandler : IRequestHandler<ListarTarefasQuery, IEnumerable<Tarefa>>
     {

@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas;
 
-namespace PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Obter
+namespace PMQ.GerenciamentoTarefas.Domain.Querys.Tarefas.Obter
 {
     public class ObterTarefaQuery : IRequest<Tarefa?>
     {

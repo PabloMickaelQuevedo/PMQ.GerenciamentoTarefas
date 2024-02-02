@@ -2,7 +2,7 @@
 using PMQ.GerenciamentoTarefas.Domain.Entities.Tarefas;
 using PMQ.GerenciamentoTarefas.Domain.Interfaces.Repositories;
 
-namespace PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Obter
+namespace PMQ.GerenciamentoTarefas.Domain.Querys.Tarefas.Obter
 {
     public class ObterTarefaQueryHandler : IRequestHandler<ObterTarefaQuery, Tarefa?>
     {
