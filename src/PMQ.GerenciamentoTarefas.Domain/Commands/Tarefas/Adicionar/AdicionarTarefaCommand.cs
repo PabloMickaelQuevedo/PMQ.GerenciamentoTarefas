@@ -11,7 +11,6 @@ namespace PMQ.GerenciamentoTarefas.Domain.Commands.Tarefas.Adicionar
         public DateTime DataVencimento { get; set; }
         public EPrioridade Prioridade { get; set; }
         public Etiqueta? Etiquetas { get; set; }
-        public string? EtiquetasId { get; set; }
         public EStatus Status { get; set; }
     }
 }
