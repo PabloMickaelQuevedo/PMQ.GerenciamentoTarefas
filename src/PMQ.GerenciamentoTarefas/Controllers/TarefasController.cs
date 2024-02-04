@@ -9,7 +9,7 @@ using PMQ.GerenciamentoTarefas.Models.Tarefas.Adicionar;
 using PMQ.GerenciamentoTarefas.Models.Tarefas.Listar;
 using PMQ.GerenciamentoTarefas.Models.Tarefas.Obter;
 
-namespace PMQ.GerenciamentoTarefas.Controllers
+namespace PMQ.GerenciamentoTarefas.Api.Controllers
 {
     [Route("api/tarefas")]
     [ApiController]

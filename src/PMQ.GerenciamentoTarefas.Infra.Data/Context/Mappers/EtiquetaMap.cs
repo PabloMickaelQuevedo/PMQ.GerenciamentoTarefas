@@ -13,7 +13,6 @@ namespace PMQ.GerenciamentoTarefas.Infra.Data.Context.Mappers
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id).HasColumnName("ID").IsRequired();
             builder.Property(e => e.Nome).HasColumnName("NOME").HasMaxLength(100).IsRequired();
-            builder.Property(e => e.Descricao).HasColumnName("DESCRICAO").HasMaxLength(500);
         }
     }
 }

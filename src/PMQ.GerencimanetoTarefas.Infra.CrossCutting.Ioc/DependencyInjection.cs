@@ -15,6 +15,7 @@ namespace PMQ.GerencimanetoTarefas.Infra.CrossCutting.Ioc
 
             // Repositories 
             services.AddScoped<ITarefaRepository, TarefaRepository>();
+            services.AddScoped<IEtiquetaRepository, EtiquetaRepository>();
 
             // Database Contexts
             services.AddDbContext<TarefaContext>();
